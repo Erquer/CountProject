@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <items>
+            <VBox fx:id="wycinanieBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="295.0">
+                     <children>
+                        <Label text="Grubość: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="grubosc" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="295.0">
+                     <children>
+                        <Label text="Długość: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dlugosc" promptText="długość" />
+                     </children>
+                  </HBox>
+                  <Label text="Długość podawana w centymetrach">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="grawerowanieBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="49.0" prefWidth="295.0">
+                     <children>
+                        <Label text="Długość: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grawerDlugosc" promptText="długość" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="295.0">
+                     <children>
+                        <Label text="Szerokość: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grawerSzerokosc" promptText="szerokość" />
+                     </children>
+                  </HBox>
+                  <Label text="Szerokość i długość podawana w milimetrach." wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <children>
+            <Button fx:id="liczButton" mnemonicParsing="false" onAction="#countCost" text="Licz">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Koszt: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="koszt" promptText="tutaj pojawi się koszt." />
+         </children>
+      </HBox>
+      <RadioButton fx:id="wycinanie" mnemonicParsing="false" text="Wycinanie">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="grawerowanie" mnemonicParsing="false" text="Grawerowanie" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</GridPane>
